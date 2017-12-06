@@ -1,0 +1,427 @@
+﻿L'appel à votre programme sur l'input "6↵O↵p↵15↵N↵N↵N↵" a renvoyé:
+Voici vos deux premières cartes:   R♣ 10♥
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   2♦ 8♠ 5♥
+Vous avez donc à votre disposition les cartes suivantes: R♣ 10♥   2♦ 8♠ 5♥
+Voulez-vous miser quelque chose [O/N]?Voici la carte du turn:   1♣
+Vous avez donc à votre disposition les cartes suivantes: R♣ 10♥   2♦ 8♠ 5♥ 1♣
+Voulez-vous miser quelque chose [O/N]?Voici la carte de la river:   1♥
+Vous avez donc à votre disposition les cartes suivantes: R♣ 10♥   2♦ 8♠ 5♥ 1♣ 1♥
+Votre pari  p : 15  vous a rapporté  3
+Il vous reste  103 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  103  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   R♣ 10♥
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   2♦ 8♠ 5♥
+Vous avez donc à votre disposition les cartes suivantes: R♣ 10♥    2♦ 8♠ 5♥
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte du turn:   1♣
+Vous avez donc à votre disposition les cartes suivantes: R♣ 10♥    2♦ 8♠ 5♥ 1♣
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte de la river:   1♥
+Vous avez donc à votre disposition les cartes suivantes: R♣ 10♥    2♦ 8♠ 5♥ 1♣ 1♥
+Votre pari p:15 vous a rapporté 3Ƀ
+Il vous reste 103Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 103 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "19↵N↵O↵b↵105↵-5↵5.5↵2*3↵99↵N↵N↵" a renvoyé:
+Voici vos deux premières cartes:   V♠ 1♣
+Voulez-vous miser quelque chose [O/N]?Voici les trois cartes du flop:   9♦ 2♠ 9♥
+Vous avez donc à votre disposition les cartes suivantes: V♠ 1♣   9♦ 2♠ 9♥
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici la carte du turn:   4♥
+Vous avez donc à votre disposition les cartes suivantes: V♠ 1♣   9♦ 2♠ 9♥ 4♥
+Voulez-vous miser quelque chose [O/N]?Veuillez répondre par Oui ou par Non:Veuillez répondre par Oui ou par Non:Veuillez répondre par Oui ou par Non:Veuillez répondre par Oui ou par Non:Voici la carte de la river:   7♦
+Vous avez donc à votre disposition les cartes suivantes: V♠ 1♣   9♦ 2♠ 9♥ 4♥ 7♦
+Merci d'avoir joué. Vous repartez avec  -5  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   V♠ 1♣
+Voulez-vous miser quelque chose [O/N]? 
+Voici les trois cartes du flop:   9♦ 2♠ 9♥
+Vous avez donc à votre disposition les cartes suivantes: V♠ 1♣    9♦ 2♠ 9♥
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? Veuillez entrer un montant entier positif inférieur à 100Ƀ: Veuillez entrer un montant entier positif inférieur à 100Ƀ: Veuillez entrer un montant entier positif inférieur à 100Ƀ: Veuillez entrer un montant entier positif inférieur à 100Ƀ: 
+Voici la carte du turn:   4♥
+Vous avez donc à votre disposition les cartes suivantes: V♠ 1♣    9♦ 2♠ 9♥ 4♥
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte de la river:   7♦
+Vous avez donc à votre disposition les cartes suivantes: V♠ 1♣    9♦ 2♠ 9♥ 4♥ 7♦
+Il vous reste 1Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 1 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "636831↵N↵O↵sc↵55↵O↵sc↵30↵N↵" a renvoyé:
+Voici vos deux premières cartes:   5♣ 3♠
+Voulez-vous miser quelque chose [O/N]?Voici les trois cartes du flop:   7♠ 6♣ 7♣
+Vous avez donc à votre disposition les cartes suivantes: 5♣ 3♠   7♠ 6♣ 7♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici la carte du turn:   8♣
+Vous avez donc à votre disposition les cartes suivantes: 5♣ 3♠   7♠ 6♣ 7♣ 8♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  45 Ƀ Combien voulez-vous miser?Voici la carte de la river:   9♣
+Vous avez donc à votre disposition les cartes suivantes: 5♣ 3♠   7♠ 6♣ 7♣ 8♣ 9♣
+Votre pari  sc : 55  vous a rapporté  97118
+Votre pari  sc : 30  vous a rapporté  35305
+Il vous reste  132523 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  132523  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   5♣ 3♠
+Voulez-vous miser quelque chose [O/N]? 
+Voici les trois cartes du flop:   7♠ 6♣ 7♣
+Vous avez donc à votre disposition les cartes suivantes: 5♣ 3♠    7♠ 6♣ 7♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici la carte du turn:   8♣
+Vous avez donc à votre disposition les cartes suivantes: 5♣ 3♠    7♠ 6♣ 7♣ 8♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 45Ƀ. Combien voulez-vous miser? 
+Voici la carte de la river:   9♣
+Vous avez donc à votre disposition les cartes suivantes: 5♣ 3♠    7♠ 6♣ 7♣ 8♣ 9♣
+Votre pari sc:55 vous a rapporté 97118Ƀ
+Votre pari sc:30 vous a rapporté 35305Ƀ
+Il vous reste 132523Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 132523 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "14↵O↵c↵10↵O↵s↵20↵O↵s↵70↵N↵" a renvoyé:
+Voici vos deux premières cartes:   2♣ 10♠
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   D♥ R♥ V♦
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠   D♥ R♥ V♦
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  90 Ƀ Combien voulez-vous miser?Voici la carte du turn:   9♦
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠   D♥ R♥ V♦ 9♦
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  70 Ƀ Combien voulez-vous miser?Voici la carte de la river:   4♠
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠   D♥ R♥ V♦ 9♦ 4♠
+Votre pari  s : 20  vous a rapporté  208
+Votre pari  s : 70  vous a rapporté  463
+Il vous reste  762 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  762  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   2♣ 10♠
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   D♥ R♥ V♦
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠    D♥ R♥ V♦
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 90Ƀ. Combien voulez-vous miser? 
+Voici la carte du turn:   9♦
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠    D♥ R♥ V♦ 9♦
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 70Ƀ. Combien voulez-vous miser? 
+Voici la carte de la river:   4♠
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠    D♥ R♥ V♦ 9♦ 4♠
+Votre pari s:20 vous a rapporté 208Ƀ
+Votre pari s:70 vous a rapporté 463Ƀ
+Il vous reste 761Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 761 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "36↵O↵f↵10↵O↵f↵40↵O↵b↵50↵N" a renvoyé:
+Voici vos deux premières cartes:   6♦ 1♠
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   1♦ 5♣ 2♦
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠   1♦ 5♣ 2♦
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  90 Ƀ Combien voulez-vous miser?Voici la carte du turn:   1♥
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠   1♦ 5♣ 2♦ 1♥
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  50 Ƀ Combien voulez-vous miser?Voici la carte de la river:   9♥
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠   1♦ 5♣ 2♦ 1♥ 9♥
+Votre pari  b : 50  vous a rapporté  164
+Il vous reste  214 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  214  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   6♦ 1♠
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   1♦ 5♣ 2♦
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠    1♦ 5♣ 2♦
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 90Ƀ. Combien voulez-vous miser? 
+Voici la carte du turn:   1♥
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠    1♦ 5♣ 2♦ 1♥
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 50Ƀ. Combien voulez-vous miser? 
+Voici la carte de la river:   9♥
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠    1♦ 5♣ 2♦ 1♥ 9♥
+Votre pari b:50 vous a rapporté 164Ƀ
+Il vous reste 214Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 214 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "37↵O↵f↵10↵O↵b↵40↵O↵f↵50↵N" a renvoyé:
+Voici vos deux premières cartes:   V♠ 10♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   2♦ 10♠ V♣
+Vous avez donc à votre disposition les cartes suivantes: V♠ 10♣   2♦ 10♠ V♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  90 Ƀ Combien voulez-vous miser?Voici la carte du turn:   V♥
+Vous avez donc à votre disposition les cartes suivantes: V♠ 10♣   2♦ 10♠ V♣ V♥
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  50 Ƀ Combien voulez-vous miser?Voici la carte de la river:   9♥
+Vous avez donc à votre disposition les cartes suivantes: V♠ 10♣   2♦ 10♠ V♣ V♥ 9♥
+Votre pari  b : 40  vous a rapporté  217
+Votre pari  f : 50  vous a rapporté  577
+Il vous reste  884 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  884  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   V♠ 10♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   2♦ 10♠ V♣
+Vous avez donc à votre disposition les cartes suivantes: V♠ 10♣    2♦ 10♠ V♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 90Ƀ. Combien voulez-vous miser? 
+Voici la carte du turn:   V♥
+Vous avez donc à votre disposition les cartes suivantes: V♠ 10♣    2♦ 10♠ V♣ V♥
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 50Ƀ. Combien voulez-vous miser? 
+Voici la carte de la river:   9♥
+Vous avez donc à votre disposition les cartes suivantes: V♠ 10♣    2♦ 10♠ V♣ V♥ 9♥
+Votre pari f:10 vous a rapporté 366Ƀ
+Votre pari b:40 vous a rapporté 217Ƀ
+Votre pari f:50 vous a rapporté 577Ƀ
+Il vous reste 1260Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 1260 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "103↵O↵ca↵100↵N↵N↵N" a renvoyé:
+Voici vos deux premières cartes:   D♦ 8♦
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   D♣ D♥ D♠
+Vous avez donc à votre disposition les cartes suivantes: D♦ 8♦   D♣ D♥ D♠
+Voulez-vous miser quelque chose [O/N]?Voici la carte du turn:   4♦
+Vous avez donc à votre disposition les cartes suivantes: D♦ 8♦   D♣ D♥ D♠ 4♦
+Voulez-vous miser quelque chose [O/N]?Voici la carte de la river:   R♥
+Vous avez donc à votre disposition les cartes suivantes: D♦ 8♦   D♣ D♥ D♠ 4♦ R♥
+Merci d'avoir joué. Vous repartez avec  0  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   D♦ 8♦
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   D♣ D♥ D♠
+Vous avez donc à votre disposition les cartes suivantes: D♦ 8♦    D♣ D♥ D♠
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte du turn:   4♦
+Vous avez donc à votre disposition les cartes suivantes: D♦ 8♦    D♣ D♥ D♠ 4♦
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte de la river:   R♥
+Vous avez donc à votre disposition les cartes suivantes: D♦ 8♦    D♣ D♥ D♠ 4♦ R♥
+Votre pari ca:100 vous a rapporté 58585Ƀ
+Il vous reste 58685Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 58685 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "16↵O↵f↵10↵N↵O↵c↵50↵N" a renvoyé:
+Voici vos deux premières cartes:   6♠ 8♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   R♣ 5♣ 7♣
+Vous avez donc à votre disposition les cartes suivantes: 6♠ 8♣   R♣ 5♣ 7♣
+Voulez-vous miser quelque chose [O/N]?Voici la carte du turn:   4♣
+Vous avez donc à votre disposition les cartes suivantes: 6♠ 8♣   R♣ 5♣ 7♣ 4♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  90 Ƀ Combien voulez-vous miser?Voici la carte de la river:   8♥
+Vous avez donc à votre disposition les cartes suivantes: 6♠ 8♣   R♣ 5♣ 7♣ 4♣ 8♥
+Votre pari  f : 10  vous a rapporté  366
+Votre pari  c : 50  vous a rapporté  502
+Il vous reste  969 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  969  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   6♠ 8♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   R♣ 5♣ 7♣
+Vous avez donc à votre disposition les cartes suivantes: 6♠ 8♣    R♣ 5♣ 7♣
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte du turn:   4♣
+Vous avez donc à votre disposition les cartes suivantes: 6♠ 8♣    R♣ 5♣ 7♣ 4♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 90Ƀ. Combien voulez-vous miser? 
+Voici la carte de la river:   8♥
+Vous avez donc à votre disposition les cartes suivantes: 6♠ 8♣    R♣ 5♣ 7♣ 4♣ 8♥
+Votre pari c:50 vous a rapporté 502Ƀ
+Il vous reste 592Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 592 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "14↵O↵s↵100↵N↵N↵N" a renvoyé:
+Voici vos deux premières cartes:   2♣ 10♠
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   D♥ R♥ V♦
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠   D♥ R♥ V♦
+Voulez-vous miser quelque chose [O/N]?Voici la carte du turn:   9♦
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠   D♥ R♥ V♦ 9♦
+Voulez-vous miser quelque chose [O/N]?Voici la carte de la river:   4♠
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠   D♥ R♥ V♦ 9♦ 4♠
+Votre pari  s : 100  vous a rapporté  2187
+Il vous reste  2287 Ƀ 
+ 
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  2287  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   2♣ 10♠
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   D♥ R♥ V♦
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠    D♥ R♥ V♦
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte du turn:   9♦
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠    D♥ R♥ V♦ 9♦
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte de la river:   4♠
+Vous avez donc à votre disposition les cartes suivantes: 2♣ 10♠    D♥ R♥ V♦ 9♦ 4♠
+Votre pari s:100 vous a rapporté 2187Ƀ
+Il vous reste 2287Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 2287 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "13↵O↵p↵15↵O↵dp↵50↵O↵dp↵35↵N" a renvoyé:
+Voici vos deux premières cartes:   5♥ 5♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   V♠ R♦ 3♠
+Vous avez donc à votre disposition les cartes suivantes: 5♥ 5♣   V♠ R♦ 3♠
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  85 Ƀ Combien voulez-vous miser?Voici la carte du turn:   V♦
+Vous avez donc à votre disposition les cartes suivantes: 5♥ 5♣   V♠ R♦ 3♠ V♦
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  35 Ƀ Combien voulez-vous miser?Voici la carte de la river:   4♣
+Vous avez donc à votre disposition les cartes suivantes: 5♥ 5♣   V♠ R♦ 3♠ V♦ 4♣
+Votre pari  p : 15  vous a rapporté  3
+Votre pari  dp : 50  vous a rapporté  43
+Votre pari  dp : 35  vous a rapporté  8
+Il vous reste  156 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  156  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   5♥ 5♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   V♠ R♦ 3♠
+Vous avez donc à votre disposition les cartes suivantes: 5♥ 5♣    V♠ R♦ 3♠
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 85Ƀ. Combien voulez-vous miser? 
+Voici la carte du turn:   V♦
+Vous avez donc à votre disposition les cartes suivantes: 5♥ 5♣    V♠ R♦ 3♠ V♦
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 35Ƀ. Combien voulez-vous miser? 
+Voici la carte de la river:   4♣
+Vous avez donc à votre disposition les cartes suivantes: 5♥ 5♣    V♠ R♦ 3♠ V♦ 4♣
+Votre pari p:15 vous a rapporté 3Ƀ
+Votre pari dp:50 vous a rapporté 43Ƀ
+Votre pari dp:35 vous a rapporté 8Ƀ
+Il vous reste 154Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 154 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "2↵O↵c↵30↵O↵s↵15↵O↵b↵30↵N" a renvoyé:
+Voici vos deux premières cartes:   1♠ 2♦
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   R♣ 6♠ 3♣
+Vous avez donc à votre disposition les cartes suivantes: 1♠ 2♦   R♣ 6♠ 3♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  70 Ƀ Combien voulez-vous miser?Voici la carte du turn:   V♣
+Vous avez donc à votre disposition les cartes suivantes: 1♠ 2♦   R♣ 6♠ 3♣ V♣
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  55 Ƀ Combien voulez-vous miser?Voici la carte de la river:   5♠
+Vous avez donc à votre disposition les cartes suivantes: 1♠ 2♦   R♣ 6♠ 3♣ V♣ 5♠
+Il vous reste  25 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  25  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   1♠ 2♦
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   R♣ 6♠ 3♣
+Vous avez donc à votre disposition les cartes suivantes: 1♠ 2♦    R♣ 6♠ 3♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 70Ƀ. Combien voulez-vous miser? 
+Voici la carte du turn:   V♣
+Vous avez donc à votre disposition les cartes suivantes: 1♠ 2♦    R♣ 6♠ 3♣ V♣
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 55Ƀ. Combien voulez-vous miser? 
+Voici la carte de la river:   5♠
+Vous avez donc à votre disposition les cartes suivantes: 1♠ 2♦    R♣ 6♠ 3♣ V♣ 5♠
+Il vous reste 25Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 25 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "36↵O↵p↵10↵N↵N↵O↵O↵f↵15↵N↵N↵N" a renvoyé:
+Voici vos deux premières cartes:   6♦ 1♠
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   1♦ 5♣ 2♦
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠   1♦ 5♣ 2♦
+Voulez-vous miser quelque chose [O/N]?Voici la carte du turn:   1♥
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠   1♦ 5♣ 2♦ 1♥
+Voulez-vous miser quelque chose [O/N]?Voici la carte de la river:   9♥
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠   1♦ 5♣ 2♦ 1♥ 9♥
+Votre pari  p : 10  vous a rapporté  2
+Il vous reste  102 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Voici vos deux premières cartes:   V♥ 3♠
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  102.65632138956283 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   4♠ 5♦ D♣
+Vous avez donc à votre disposition les cartes suivantes: V♥ 3♠   4♠ 5♦ D♣
+Voulez-vous miser quelque chose [O/N]?Voici la carte du turn:   V♦
+Vous avez donc à votre disposition les cartes suivantes: V♥ 3♠   4♠ 5♦ D♣ V♦
+Voulez-vous miser quelque chose [O/N]?Voici la carte de la river:   7♠
+Vous avez donc à votre disposition les cartes suivantes: V♥ 3♠   4♠ 5♦ D♣ V♦ 7♠
+Votre pari  f : 15  vous a rapporté  549
+Il vous reste  652 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  652  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   6♦ 1♠
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   1♦ 5♣ 2♦
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠    1♦ 5♣ 2♦
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte du turn:   1♥
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠    1♦ 5♣ 2♦ 1♥
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte de la river:   9♥
+Vous avez donc à votre disposition les cartes suivantes: 6♦ 1♠    1♦ 5♣ 2♦ 1♥ 9♥
+Votre pari p:10 vous a rapporté 2Ƀ
+Il vous reste 102Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Voici vos deux premières cartes:   V♥ 3♠
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 102Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   4♠ 5♦ D♣
+Vous avez donc à votre disposition les cartes suivantes: V♥ 3♠    4♠ 5♦ D♣
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte du turn:   V♦
+Vous avez donc à votre disposition les cartes suivantes: V♥ 3♠    4♠ 5♦ D♣ V♦
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte de la river:   7♠
+Vous avez donc à votre disposition les cartes suivantes: V♥ 3♠    4♠ 5♦ D♣ V♦ 7♠
+Il vous reste 87Ƀ
+
+Voulez-vous continuer à jouer [O/N]? 
+Merci d'avoir joué. Vous repartez avec 87 Ƀ. Bye
+fail	L'appel à votre programme sur l'input "25↵s↵5↵O↵p↵10↵O↵g↵p↵10↵N↵N" a renvoyé:
+Voici vos deux premières cartes:   7♥ R♦
+Voulez-vous miser quelque chose [O/N]?Veuillez répondre par Oui ou par Non:Veuillez répondre par Oui ou par Non:Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Il vous reste  100 Ƀ Combien voulez-vous miser?Voici les trois cartes du flop:   1♥ 4♦ 5♠
+Vous avez donc à votre disposition les cartes suivantes: 7♥ R♦   1♥ 4♦ 5♠
+Voulez-vous miser quelque chose [O/N]?Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?Veuillez entrer un résultat valable : p/dp/b/s/c/f/ca/sc ?Il vous reste  90 Ƀ Combien voulez-vous miser?Voici la carte du turn:   V♥
+Vous avez donc à votre disposition les cartes suivantes: 7♥ R♦   1♥ 4♦ 5♠ V♥
+Voulez-vous miser quelque chose [O/N]?Voici la carte de la river:   8♣
+Vous avez donc à votre disposition les cartes suivantes: 7♥ R♦   1♥ 4♦ 5♠ V♥ 8♣
+Votre pari  p : 10  vous a rapporté  2
+Votre pari  p : 10  vous a rapporté  -3
+Il vous reste  98 Ƀ 
+
+Voulez-vous continuer à jouer [O/N]? Merci d'avoir joué. Vous repartez avec  98  Ƀ. Bye
+
+Le résultat attendu était :
+Voici vos deux premières cartes:   7♥ R♦
+Voulez-vous miser quelque chose [O/N]? Veuillez répondre par Oui ou par Non: Veuillez répondre par Oui ou par Non: Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Il vous reste 100Ƀ. Combien voulez-vous miser? 
+Voici les trois cartes du flop:   1♥ 4♦ 5♠
+Vous avez donc à votre disposition les cartes suivantes: 7♥ R♦    1♥ 4♦ 5♠
+Voulez-vous miser quelque chose [O/N]? Sur quel résultat voulez-vous miser [p/dp/b/s/c/f/ca/sc] ?
+Veuillez entrer un résultat valable : p/dp/b/s/c/f/ca/sc ? Il vous reste 90Ƀ. Combien voulez-vous miser? 
+Voici la carte du turn:   V♥
+Vous avez donc à votre disposition les cartes suivantes: 7♥ R♦    1♥ 4♦ 5♠ V♥
+Voulez-vous miser quelque chose [O/N]? 
+Voici la carte de la river:   8♣
+Vous avez donc à votre disposition les cartes suivantes: 7♥ R♦    1♥ 4♦ 5♠ V♥ 8♣
+Il vous reste 80Ƀ
