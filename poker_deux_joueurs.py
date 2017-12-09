@@ -4,11 +4,8 @@
 
 #-----------------------------liste de shits a faire------------#
 
-##mettre les messages "votre pari a rapporte X Bitcoin " a la fin du programme.... fait, mais a retravailler
-##gerer les erreurs utilisateurs (inferiorite a la mise du moment)
-##nous ne pouvons jamais miser plus que la mise elle-meme et a chaque tour ce quon a miser est reduit de la mise
-##faire en sorte que si une mise est vrai au ieme tour son pari soit comptabiliser
-##restructurer le code (pour tp 2)
+##retravailler S, F et SC, car mes proba combi ne sont pas les memes bizzarement... (2-3 heures)
+##Travailler sur le dialogue (30 minutes)
 
 
 
@@ -247,7 +244,7 @@ def succes(cartes_joueur,cartes_devoile,pari):
 def calcul_des_gains(cartes_joueur,cartes_flop,nouvelle_mise,pari,i,old_mise,lst_pari):
     gain,prob,gain_reel = 0,0,0
     li = i
-    infich = FICHIER_PROBABILITE
+    infich = 'C:/Users/nadbe_000/Desktop/probabilites.txt'
     # ouverture du fichir pour chercher la probabilité de p
     f = open(infich,'r')
     s = f.readlines()
@@ -368,7 +365,7 @@ def erreurPari():
 
     return pari    
 
-def mise_1(cartes,cartes_joueur,mise):
+def mise_1(cartes,mise,deck,cartes_joueur,cartes_ordi,cartes_table,solde,lst_pari_ordi):
     i=1
     cartes_string = []
     #je veux avoir une liste avec la main du joueur en string 
@@ -388,20 +385,22 @@ def mise_1(cartes,cartes_joueur,mise):
         print(MSG_SOLDE,int(mise),MSG_BITCOIN,". ",MSG_RESTE_MISE,sep="",end=" ")
         nouvelle_mise = input()
         nouvelle_mise = erreurMise(nouvelle_mise,mise)
-        
+        #faire jouer l'ordinateur avant de piger les cartes du flop
+        solde,gain_ordi,lst_pari_ordi = miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,i,solde,lst_pari_ordi)
         cartes_flop = flop(cartes)
 
         
     elif (reponse == 'N' ):
-        #on passe a letape suivante qui est flop
+        #on passe a letape suivante qui est flop et faire jouer ordi
+        solde,gain_ordi,lst_pari_ordi = miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,i,solde,lst_pari_ordi)
         cartes_flop = flop(cartes)
         nouvelle_mise = 0
         pari = ''
-    
-    return nouvelle_mise,pari,i,cartes_flop,mise
+
+    return nouvelle_mise,pari,i,cartes_flop,mise,solde,gain_ordi,lst_pari_ordi 
     
 
-def mise_2(cartes,cartes_joueur,mise):
+def mise_2(cartes,mise,deck,cartes_joueur,cartes_ordi,cartes_table,i,solde,lst_pari_ordi):
 
 
     i=2
@@ -422,23 +421,25 @@ def mise_2(cartes,cartes_joueur,mise):
         print(MSG_SOLDE,int(mise),MSG_BITCOIN,". ",MSG_RESTE_MISE,sep="",end = " ")
         nouvelle_mise = input()
         nouvelle_mise = erreurMise(nouvelle_mise,mise)
-        
+        #faire jouer l'ordinateur avant de piger les cartes du turn
+        solde,gain_ordi,lst_pari_ordi = miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,i,solde,lst_pari_ordi)
         cartes_turn = turn(cartes)
 
         
     elif (reponse == 'N' ):
-        #on passe a letape suivante qui est turn
+        #on passe a letape suivante qui est turn et faire jouer l'ordi
+        solde,gain_ordi,lst_pari_ordi = miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,i,solde,lst_pari_ordi)
         cartes_turn = turn(cartes)
         nouvelle_mise = 0
         pari = ''
     
-    return nouvelle_mise,pari,i,cartes_turn,mise
+    return nouvelle_mise,pari,i,cartes_turn,mise,solde,gain_ordi,lst_pari_ordi 
 
 
 
 
 
-def mise_3(cartes,cartes_joueur,mise):
+def mise_3(cartes,mise,deck,cartes_joueur,cartes_ordi,cartes_table,i,solde,lst_pari_ordi):
     i=3
     
     cartes_string = []
@@ -458,76 +459,142 @@ def mise_3(cartes,cartes_joueur,mise):
         print(MSG_SOLDE,int(mise),MSG_BITCOIN,". ",MSG_RESTE_MISE,sep="",end = " ")
         nouvelle_mise = input()
         nouvelle_mise = erreurMise(nouvelle_mise,mise)
-        
+        #faire jouer l'ordinateur avant de piger les cartes de la riviere
+        solde,gain_ordi,lst_pari_ordi = miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,i,solde,lst_pari_ordi)
         cartes_river = river(cartes)
 
-        
+    
+            
     elif (reponse == 'N' ):
-        #on passe a letape suivante qui est river
+        #on passe a letape suivante qui est river et faire jouer l'ordinateur avec de piger les cartes
+        solde,gain_ordi,lst_pari_ordi = miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,i,solde,lst_pari_ordi)
         cartes_river = river(cartes)
         nouvelle_mise = 0
         pari = ''
     
-    return nouvelle_mise,pari,i,cartes_river,mise
+    return nouvelle_mise,pari,i,cartes_river,mise,solde,gain_ordi,lst_pari_ordi 
 
 
-def calculMise(a,solde):
-    print(a,solde)
-    tm.sleep(5)
-    montant = min(solde,max(1,int(solde*a)))
+
+############################################################################
+#                                                                          #
+#                               SKYNET                                     #
+#                                                                          #
+############################################################################
+
+
+def calcul_des_gains_ordi(cartes_joueur,cartes,nouvelle_mise,pari,i,old_mise,lst_pari_ordi):
+    gain,prob,gain_reel = 0,0,0
+    li = i
+    infich = 'C:/Users/nadbe_000/Desktop/probabilites.txt'
+    # ouverture du fichir pour chercher la probabilité de p
+    f = open(infich,'r')
+    s = f.readlines()
+
+    sp_file = []
+    sp_file2 = []
+    
+    #essayeer d'optimiser ce monstre inefficace 
+    if (succes(cartes_joueur,cartes,pari)):
+        for lines in s:
+            sp_file = lines.split(" ")
+            if ( pari in sp_file):
+                for i in sp_file[1] :
+                    if i.isdigit() or i == '.' :
+                        sp_file2.append(i)
+    
+ 
+        sp_file = "".join(sp_file2)
+        #basically je peux pas convertir un type de str en int c'est infesable?
+        a = float(sp_file)
+        #print("type de b: ",type(a),"valeur de :",a, "type de li :",type(li),"valeur de li :",li)
+        gain = nouvelle_mise //((a/100)*li)
+ 
+ 
+        gain_reel = gain - nouvelle_mise
+        lst_pari_ordi.append((pari,gain_reel,nouvelle_mise,gain))
+        
+    old_mise -= nouvelle_mise
+    f.close() 
+    return old_mise,gain,lst_pari_ordi
+    
+
+
+
+def calculMise(index,combinaison,solde):
+
+    montant = min(solde,max(1,int(solde*(combinaison[0][index]/MAX_IT))))
     return montant
 
-
 def calculEsperance(combinaison,tour):
-    resultat = 0
+    resultat = 1
     prob = [79.0119,26.7607,7.7692,4.3718,3.0154,2.6563,0.1704,0.0283]
     ratioCombi = []
     for i in range(len(combinaison)):
-        for j in range(0,8):
-            ratioCombi.append(combinaison[i][j]/prob[i]*tour)
+        for j in range( 0,8):
+            ratioCombi.append((combinaison[i][j]/MAX_IT)/((prob[j]/100)*tour))
+    print("proba combi :",ratioCombi)
+    if (max(ratioCombi) < 1) :
+        resultat = 0
 
-    if max(ratioCombi) < 1 :
-        resultat = 1
+    return combinaison[0][ratioCombi.index(max(ratioCombi))],ratioCombi.index(max(ratioCombi)),resultat
     
-    return combinaison[0][ratioCombi.index(max(ratioCombi))],resultat
-    
+def capturePari(index):
+    pari = ['p','dp','b','s','c','f','ca','sc']
+    return pari[index]
 
-
-def miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,i,j,tour,solde):
-
-    if(tour==1):
-        i+=3
-        j-=3
-    elif(tour==2):
-        i+=1
-        j-=1
-    elif(tour==3):
-        i+=1
-        j-=1
-    
-    
+def miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,tour,solde,lst_pari_ordi):
+    pari = ''
     #creation de la liste de cartes inconnues et connues
+    
     jeu = []
+    cartes = []
     cartes_inconnues = []
     cartes_connues = []
-    #assignation du deck et cartes_j et cartes_tables inconnue a cartes_inconnues
 
-    cartes_inconnues = deck + cartes_joueur + cartes_table[:j]
-    #assignation des cartes connues et cartes sur tables devoile a cartes_connues
+    
+    if(tour==1):
+        #print("cartes de la table inconnue : ",cartes_table[0:],"cartes joueur",cartes_joueur)
+        #assignation du deck et cartes_j et cartes_tables inconnue a cartes_inconnues
+        cartes_inconnues = deck + cartes_joueur + cartes_table[0:]
+        #au premier tour, il n'y a pas de cartes connues sur la table sauf celle de l'ordi
+        cartes_connues = cartes_ordi
+        #print("carte connue de l ordi: ",cartes_connues)
+        j=5
+        
+    elif(tour==2):
+        #print("cartes de la table inconnue : ",cartes_table[3:],"cartes joueur",cartes_joueur)
+        #assignation du deck et cartes_j et cartes_tables inconnue a cartes_inconnues
+        cartes_inconnues = deck + cartes_joueur + cartes_table[3:]
+        #print("cartes de la table connue : ",cartes_table[:3],"cartes joueur",cartes_joueur)
+        #au deuxieme tour les cartes connues sont les 3 dernières cartes de la table 
+        cartes_connues = cartes_ordi + cartes_table[:3]
+        #print("carte connue de l ordi: ",cartes_connues)
+        j=2
 
-    cartes_connues = cartes_ordi + cartes_table[j:]
+    elif(tour==3):
+        #print("cartes de la table inconnue : ",cartes_table[4:],"cartes joueur",cartes_joueur)
+        #assignation du deck et cartes_j et cartes_tables inconnue a cartes_inconnues
+        cartes_inconnues = deck + cartes_joueur + cartes_table[4:]
+        #print("cartes de la table connue : ",cartes_table[:4],"cartes joueur",cartes_joueur)
+        #Finalement une seule carte n'est pas connue et c'est la premiere
+        cartes_connues = cartes_ordi + cartes_table[:4]
+        #print("carte connue de l ordi: ",cartes_connues)
+        j=1
+    
+
     combinaison = []
     p,dp,b,c,f,ca,sc,s=0,0,0,0,0,0,0,0
     for i in range(MAX_IT):
         jeu = cartes_connues + random.sample(cartes_inconnues,j)
-
+        
         resultat = pair(cartes_ordi,jeu)
         if(resultat):
             p+=1
         
         resultat = doublePair(cartes_ordi,jeu)
         if(resultat):
-           dp+=1        
+            dp+=1        
 
         resultat = brelan(cartes_ordi,jeu)
         if(resultat):
@@ -551,22 +618,31 @@ def miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,i,j,tour,solde):
         #suite colore (suite + couleur)
         resultat = (suite(cartes_ordi,jeu) and couleur(cartes_joueur,jeu))
         if(resultat):
-            sc+=1         
+            sc+=1
 
+    combinaison.append((p,dp,b,s,c,f,ca,sc))
+    #combinaison.append((p/MAX_IT,dp/MAX_IT,b/MAX_IT,s/MAX_IT,c/MAX_IT,f/MAX_IT,ca/MAX_IT,sc/MAX_IT))
     
-    combinaison.append((p/MAX_IT,dp/MAX_IT,b/MAX_IT,s/MAX_IT,c/MAX_IT,f/MAX_IT,ca/MAX_IT,sc/MAX_IT))
-    a,resultat = calculEsperance(combinaison,tour)
+    maxEsperance,index,resultat = calculEsperance(combinaison,tour)
+    #print("resultat :", index)
+    cartes = cartes_ordi + cartes_table
+    if(resultat == 1):
+        montant = calculMise(index,combinaison,solde)
+        pari = capturePari(index)
+        print(MSG_MISE_ORDI, montant,MSG_PARI_ORDI,pari)
+        solde,gain_ordi,lst_pari_ordi = calcul_des_gains_ordi(cartes_ordi,cartes,montant,pari,tour,solde,lst_pari_ordi)
 
-    if(resultat == 0):
-        print("Computer will skip the turn")
+  
     else :
-        montant = calculMise(a,solde)
-        print(montant)
+        print(MSG_PARI_RIEN_ORDI)
+        gain_ordi = 0
  
 
-    tm.sleep(5000)
 
-    #return combinaison
+    return solde,gain_ordi,lst_pari_ordi
+
+##def rejouer():
+##    
     
 # le s == un nombre deterministe pour initialiser le random
 def poker_contre_ordi(s):
@@ -587,38 +663,44 @@ def poker_contre_ordi(s):
     cartes_ordi = [deck.pop(),deck.pop()]
     cartes_table = [deck.pop() for i in range(5)]
 
-    #je cree le jeu de carte de mon joueur avec les cartes sur la table à part
-    
-    cartes = cartes_table + cartes_joueur
- 
+    #je cree le jeu de carte de mon joueur avec les cartes sur la table à part ainsi que celle de l'ordi (pour me faciliter la tache plus tard)
+    cartes = cartes_joueur + cartes_table
+    cartes_2 = cartes_ordi + cartes_table
    
     #premiere mise du jeu + flop et calcul du gain
     nouvelle_mise,reponse= 100,'O'
-    g,j,k=0,5,0
+    g=0
     #cree la liste des paris
+    lst_pari_ordi = []
     lst_pari = []
-    
+    solde = 100
     while(reponse != 'N'):
  
-        nouvelle_mise,pari,i,cartes_devoile,old_mise = mise_1(cartes,cartes_joueur,nouvelle_mise)
-        miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,k,j,i)
+        nouvelle_mise,pari,i,cartes_devoile,old_mise,solde_ordi,gain_ordi,lst_pari_ordi  = mise_1(cartes,nouvelle_mise,deck,cartes_joueur,cartes_ordi,cartes_table,solde,lst_pari_ordi)
         gain,g,lst_pari = calcul_des_gains(cartes_joueur,cartes,nouvelle_mise,pari,i,old_mise,lst_pari)
 
         
-        nouvelle_mise,pari,i,cartes_devoile,old_mise = mise_2(cartes,cartes,gain)
+        nouvelle_mise,pari,i,cartes_devoile,old_mise,solde_ordi,gain_ordi,lst_pari_ordi  = mise_2(cartes,gain,deck,cartes_joueur,cartes_ordi,cartes_table,i,solde_ordi,lst_pari_ordi)
         gain,g,lst_pari = calcul_des_gains(cartes_joueur,cartes,nouvelle_mise,pari,i,gain,lst_pari)
 
-        nouvelle_mise,pari,i,cartes_devoile,old_mise = mise_3(cartes,cartes,gain)
+        nouvelle_mise,pari,i,cartes_devoile,old_mise,solde_ordi,gain_ordi,lst_pari_ordi  = mise_3(cartes,gain,deck,cartes_joueur,cartes_ordi,cartes_table,i,solde_ordi,lst_pari_ordi)
         gain,g,lst_pari = calcul_des_gains(cartes_joueur,cartes,nouvelle_mise,pari,i,gain,lst_pari)
 
         cartes_string = []
+        cartes_string_ordi = []
         for j in range(0,7):
             cartes_string.append(carte_to_string(cartes[j]))
+            cartes_string_ordi.append(carte_to_string(cartes_2[j]))
+
+            
         
         print(MSG_RECAP_CARTES," ".join(cartes_string[0:2]),"  "," ".join(cartes_string[2:7]))
+        print(MSG_RECAP_CARTES_ORDI," ".join(cartes_string_ordi[0:2]),"  "," ".join(cartes_string_ordi[2:7]))
+
         
+
+        ##calcul des gains du joueur
         for i,j,k,l in lst_pari :
-            
             print(MSG_GAIN_PARI_1,i,":", int(k), MSG_GAIN_PARI_2, int(j),MSG_BITCOIN,sep="")
 
         l = sum(l for i,j,k,l in lst_pari)
@@ -626,10 +708,24 @@ def poker_contre_ordi(s):
         if(l):
             gain += l
 
+        ##calcul des gains de l'ordi, meme approche
+
+        for i,j,k,l in lst_pari_ordi :
+            print(MSG_GAIN_PARI_1_ORDI,i,":", int(k), MSG_GAIN_PARI_2_ORDI, int(j),MSG_BITCOIN,sep="")
+
+        l = sum(l for i,j,k,l in lst_pari_ordi)
+
+        if(l):
+            solde_ordi += l
+
         if(int(gain) <= 0):
-            break;        
-      
-        print(MSG_SOLDE,int(gain),MSG_BITCOIN,   "\n",sep="")
+            break;
+
+        
+        print(MSG_SOLDE,int(gain),MSG_BITCOIN,sep="")
+        print(MSG_SOLDE_ORDI,int(solde_ordi),MSG_BITCOIN,   "\n",sep="")
+
+
         print(MSG_CONTINUER)
         reponse = input()
         reponse = reponse.upper()
@@ -640,21 +736,34 @@ def poker_contre_ordi(s):
         
         #je reshuffle s'il desire continuer a jouer#
         if(reponse == 'O'):
-            nouvelle_mise = gain #je dois attribuer gain a nouvelle_mise si on rejoue, car gain == old_mise en realite    
+            nouvelle_mise = gain #je dois attribuer gain a nouvelle_mise si on rejoue, car gain == old_mise en realite
+            solde = solde_ordi
             lst_pari = []#la liste des paris doit etre resetter a 0
-            cartes = random.sample(deck, 7)
+            lst_pari_ordi = [] #liste des paris ordi reset
+            
+            #nouveau deck
 
-            cartes_joueur = []
-            for i in range(0,2):
-                cartes_joueur.append(cartes[i])
+            newDeck = cartes_table + cartes_joueur + cartes_table
+            random.shuffle(newDeck)
+
+            cartes_joueur = [newDeck.pop(),newDeck.pop()]
+            cartes_ordi = [newDeck.pop(),newDeck.pop()]
+            cartes_table = [newDeck.pop() for i in range(5)]
+
+            #je cree le jeu de carte de mon joueur avec les cartes sur la table à part ainsi que celle de l'ordi (pour me faciliter la tache plus tard)
+            cartes = cartes_joueur + cartes_table
+            cartes_2 = cartes_ordi + cartes_table
+           
+
 
         elif(reponse == 'N'):
-            print(MSG_FIN_1, int(gain),MSG_FIN_2,sep="")
+            if(int(solde_ordi) > int(gain)):
+                print(MSG_FIN_PERDU)
+            else : print(MSG_FIN_GAGNE)
 
 
-
-s=2000
-
+s=2732
+#s=2000
 poker_contre_ordi(s)
 
 
