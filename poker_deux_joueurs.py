@@ -4,7 +4,7 @@
 
 #-----------------------------liste de shits a faire------------#
 
-##retravailler S, F et SC, car mes proba combi ne sont pas les memes bizzarement... (2-3 heures)
+##retravailler SC, car mes proba combi ne sont pas les memes bizzarement... (2-3 heures)
 ##Travailler sur le dialogue (30 minutes)
 
 
@@ -72,6 +72,12 @@ def creer_jeu():
 #dans cette fonction je veux savoir si le joueur a eu un succès ou non
 # A chaque mise selon le pari
 
+############################################################################
+#                                                                          #
+#                       Evaluation des mains                               #
+#                                                                          #
+############################################################################
+
 def pair(cartes_joueur,cartes_devoile):
     resultat,i = 0,0
     dic={}
@@ -133,18 +139,31 @@ def brelan(cartes_joueur,cartes_devoile):
 def suite(cartes_joueur,cartes_devoile):
         #append mon jeu de carte joueur avec ddevoile
         carte_suite = []
+        carte_suite_filter = []
         resultat,j=0,1
             
         for k in range(0,len(cartes_devoile)):
             carte_suite.append(cartes_devoile[k][0])
         carte_suite.sort()
-        for i in range(len(carte_suite) - 1) :
-            if ( carte_suite[i+1] - carte_suite[i]  != 1) : resultat = 0
+
+        #il faut que je filtre les doublons
+
+        for l in carte_suite:
+            if(l not in carte_suite_filter):
+                carte_suite_filter.append(l)
+        
+        for i in range(len(carte_suite_filter) - 1) :
+            if ( carte_suite_filter[i+1] - carte_suite_filter[i]  != 1 and j<5) :
+                j=1
+                resultat = 0
             else :
                 j+=1
+                
+        if(j>=5):
+  
+            resultat = 1
 
-        if(j>=5): resultat = 1
-
+        
         return resultat
 
 
@@ -175,11 +194,11 @@ def full(cartes_joueur,cartes_devoile):
             dic[m] = dic.get(m,0) + 1
      
         for g,h in dic.items():
-            if( h>=3 ): main.append(g)
-            if( h==2 ): main.append(g)
+            if( h>=3 ): main.append(h)
+            if( h==2 ): main.append(h)
  
 
-        if(len(main) >= 2 ):resultat = 1
+        if(len(main) >= 2 and 3 in main):resultat = 1
 
         return resultat
 
@@ -203,6 +222,58 @@ def carre(cartes_joueur,cartes_devoile):
 
     return resultat
 
+def suiteColor(cartes_joueur,cartes_devoile):
+    #/suite colorer (plus tough que je ne pensais) mais c<est la derniere a fixer
+    #append mon jeu de carte joueur avec ddevoile
+    carte_suite = []
+    carte_suite_filter = []
+    carte_couleur = []
+    tmp=[]
+    dic = {}
+    vTmp,itera=0,0
+    resultat,resultatTmp=0,0
+    
+    #prefiltrage de mon dictionnaire
+
+    for i in range(0,len(cartes_devoile)):
+        carte_couleur.append(cartes_devoile[i][1])
+
+
+
+    for j in carte_couleur :
+            dic[j] = dic.get(j,0) + 1 # rempli le dictionnaire
+
+    for f,g in dic.items():
+        if( g >= 5):
+            vTmp = f
+#boucle for qui me permet de recuperer les cartes avec la meme couleur 
+    for i,j in cartes_devoile:
+        if(j == vTmp):
+            tmp.append((i,j))
+#japplique le filtrage de suite
+    for k in range(0,len(tmp)):
+        carte_suite.append(tmp[k][0])
+
+    carte_suite.sort()
+    #il faut que je filtre les doublons
+
+    for l in carte_suite:
+        if(l not in carte_suite_filter):
+            carte_suite_filter.append(l)
+    
+    j=1
+    for i in range(len(carte_suite_filter) - 1) :
+        if ( carte_suite_filter[i+1] - carte_suite_filter[i]  != 1 and j<5) :
+            j=1
+            resultat = 0
+        else :
+
+            j+=1
+    
+    if(j>=5):
+        resultat = 1
+
+    return resultat
 
 
 
@@ -234,11 +305,8 @@ def succes(cartes_joueur,cartes_devoile,pari):
         
     #suite colore (suite + couleur)
     elif pari == 'sc':
-        if(suite(cartes_joueur,cartes_devoile) and couleur(cartes_joueur,cartes_devoile)):
-            resultat = 1
-
+        resultat = suiteColor(cartes_joueur,cartes_devoile)
     
-
     return resultat
 
 def calcul_des_gains(cartes_joueur,cartes_flop,nouvelle_mise,pari,i,old_mise,lst_pari):
@@ -318,6 +386,14 @@ def river(cartes):
 
     return cartes[0:7]
 
+
+
+
+############################################################################
+#                                                                          #
+#                           joueur humain                                  #
+#                                                                          #
+############################################################################
 
 def erreurMise(nouvelle_mise,mise):
     if (nouvelle_mise.isalnum() == True):
@@ -616,13 +692,13 @@ def miseOrdinateur(deck,cartes_joueur,cartes_ordi,cartes_table,tour,solde,lst_pa
         if(resultat):
             ca+=1        
         #suite colore (suite + couleur)
-        resultat = (suite(cartes_ordi,jeu) and couleur(cartes_joueur,jeu))
+        resultat = suiteColor(cartes_ordi,jeu)
         if(resultat):
             sc+=1
 
     combinaison.append((p,dp,b,s,c,f,ca,sc))
     #combinaison.append((p/MAX_IT,dp/MAX_IT,b/MAX_IT,s/MAX_IT,c/MAX_IT,f/MAX_IT,ca/MAX_IT,sc/MAX_IT))
-    
+    print(combinaison)
     maxEsperance,index,resultat = calculEsperance(combinaison,tour)
     #print("resultat :", index)
     cartes = cartes_ordi + cartes_table
